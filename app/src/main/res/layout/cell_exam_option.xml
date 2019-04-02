@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/cell_exam_option"
+    android:background="@drawable/background_exam_options">
+
+<ImageView
+    android:id="@+id/iv_simple_oval"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:src="@drawable/oval"
+    android:layout_margin="14dp"/>
+
+    <TextView
+        android:id="@+id/tv_option_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_7C7C7C"
+        android:textSize="16sp"
+        android:fontFamily="@font/cera_pro_bold"
+        android:text="Test"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

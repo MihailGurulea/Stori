@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.main_menu.VocabularyFragment"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/rl_upper_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <ImageView
+            android:id="@+id/iv_language"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/ic_english_flag" />
+
+        <TextView
+            android:id="@+id/tv_let_s_train"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/cera_pro_regular"
+            android:gravity="center_vertical"
+            android:text="@string/let_s_train"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title_vocabulary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_upper_bar"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/cera_pro_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/vocabulary_word"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@id/tv_title_vocabulary"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_grey_background"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_search_icon_light_grey" />
+
+        <EditText
+            android:id="@+id/et_search_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:imeOptions="actionSearch"
+            android:layout_marginEnd="6dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/cera_pro_regular"
+            android:hint="@string/search"
+            android:inputType="textCapWords"
+            android:textColor="@color/search_dark_grey"
+            android:textColorHint="@color/search_light_grey"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_list_with_headers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_search"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
+            android:fontFamily="@font/cera_pro_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/empty_fragment_text"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_let_s_learn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_read_orange"
+            android:fontFamily="@font/cera_pro_bold"
+            android:text="@string/let_s_learn"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

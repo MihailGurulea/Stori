@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_seek_and_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="13dp"
+            android:paddingTop="21dp"
+            android:paddingEnd="21dp"
+            android:src="@drawable/ic_path" />
+
+        <ProgressBar
+            android:id="@+id/pb_chapter_progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/f1f1f2_background_3dp_corner"
+            android:max="10"
+            android:progress="1"
+            android:progressDrawable="@drawable/custom_progress_bar" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_exam_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_seek_and_back"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="77dp"
+        android:fontFamily="@font/cera_pro_bold"
+        android:text="@string/select_the_correct_translation"
+        android:textAlignment="center"
+        android:textColor="@color/grey_929292"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv_exam_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_exam_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/text_line_grey"
+        android:fontFamily="@font/cera_pro_bold"
+        android:text="@string/settings"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/lv_exam_options_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_check"
+        android:layout_below="@id/tv_exam_word"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="37dp"/>
+
+    <Button
+        android:id="@+id/btn_check"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_start_exam"
+        android:fontFamily="@font/cera_pro_bold"
+        android:text="@string/check"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</RelativeLayout>

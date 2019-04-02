@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="264dp"
+    android:background="@color/search_background_grey">
+
+    <ImageView
+        android:id="@+id/ic_premium"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:elevation="0.1dp"
+        android:src="@drawable/ic_premium_crown"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cell_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/grey_shadow_corner_radius_border"
+        android:scaleType="centerCrop"
+        android:src="@drawable/suggested_stori_image" />
+
+    <TextView
+        android:id="@+id/tv_stori_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/cell_image"
+        android:layout_alignEnd="@+id/cell_image"
+        android:layout_alignBottom="@id/cell_image"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:fontFamily="@font/cera_pro_medium"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/the_wedding"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_stori_bottom_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cell_image"
+        android:layout_marginBottom="-28dp"
+        android:fontFamily="@font/cera_pro_light"
+        android:text="The Wedding, Romance"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#32466B</color>
+    <color name="colorAccent">#FFFFFF</color>
+    
+    <color name="colorSplashScreenTitle">#2C3E61</color>
+    <color name="colorSplashScreenTitleShadow">#FFC86B</color>
+    <color name="stori_yellow">#FFC86B</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparent20">#33FFFFFF</color>
+    <color name="white_45_opacity">#73FFFFFF</color>
+    <color name="btn_text_blue">#1A2442</color>
+    <color name="black">#000000</color>
+    <color name="greyish">#B3B3B3</color>
+    <color name="category_title_grey">#F5F5F5</color>
+    <color name="email_or_subscription_grey">#B5B5B5</color>
+    <color name="get_premium_orange">#FFC86B</color>
+    <color name="profile_screen_border_color">#F0F0F0</color>
+    <color name="profile_screen_blue">#4A90E2</color>
+    <color name="get_premium_amount_grey">#C7C7C7</color>
+    <color name="search_grey">#F1F1F2</color>
+    <color name="search_light_grey">#C7C7C7</color>
+    <color name="search_dark_grey">#8E8E93</color>
+    <color name="search_background_grey">#FAFAFA</color>
+    <color name="grey_929292">#929292</color>
+    <color name="category_option_grey">#C9C9C9</color>
+    <color name="grey_9C9C9C">#9C9C9C</color>
+    <color name="white_F9F9F9">#F9F9F9</color>
+    <color name="grey_7C7C7C">#7C7C7C</color>
+    <color name="F1F1F2_grey">#F1F1F2</color>
+    <color name="white_opacity_0">#00FFFFFF</color>
+</resources>

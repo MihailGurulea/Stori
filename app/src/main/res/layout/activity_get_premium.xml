@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+>
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cancel_btn"
+            android:layout_width="12dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/ic_backarrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/cera_pro_regular"
+            android:text="@string/back_word"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/get_premium_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_back"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/cera_pro_bold"
+        android:text="@string/get_premium_word"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="46sp" />
+
+    <LinearLayout
+        android:paddingTop="2dp"
+        android:id="@+id/ll_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/get_premium_tv"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="38dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_unlimited_words"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/unlimited_words_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/sf_pro_text_medium"
+                android:src="@drawable/ic_aletter"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:gravity="center"
+                android:text="@string/unlimited_words"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_no_ads"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/no_ads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/sf_pro_text_medium"
+                android:src="@drawable/ic_megaphone"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:gravity="center"
+                android:text="@string/no_ads_word"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_unlimited_stories"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/unlimited_stories_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/sf_pro_text_medium"
+                android:src="@drawable/ic_books_stack_of_three"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:gravity="center"
+                android:text="@string/unlimited_stories"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:layout_below="@+id/ll_options"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        android:paddingStart="9dp"
+        android:paddingEnd="9dp">
+
+        <RelativeLayout
+            android:layout_marginTop="2dp"
+            android:id="@+id/rl_montly_plan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/grey_premium_with_corner_radius_border"
+            android:layout_marginEnd="4.5dp">
+
+            <TextView
+                android:id="@+id/monthly_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="56dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:gravity="center_horizontal"
+                android:textColor="@color/get_premium_amount_grey"
+                android:textSize="15sp"
+                android:text="@string/monthly_price" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:gravity="center"
+                android:text="@string/monthly_plan"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="2dp"
+            android:id="@+id/rl_quarterly_plan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/grey_premium_with_corner_radius_border"
+            android:layout_marginStart="4.5dp"
+            android:layout_marginEnd="4.5dp">
+
+            <TextView
+                android:id="@+id/quarterly_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_quarterly_plan"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:gravity="center_horizontal"
+                android:textColor="@color/get_premium_amount_grey"
+                android:textSize="15sp"
+                android:text="@string/quarterly_price" />
+
+            <TextView
+                android:id="@+id/tv_quarterly_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:gravity="center"
+                android:text="@string/quarterly_plan"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="2dp"
+            android:id="@+id/rl_annual_plan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/grey_premium_with_corner_radius_border"
+            android:layout_marginStart="4.5dp">
+
+            <TextView
+                android:id="@+id/year_paln"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_year_paln"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:gravity="center_horizontal"
+                android:textColor="@color/get_premium_amount_grey"
+                android:textSize="15sp"
+                android:text="@string/annual_price" />
+
+            <TextView
+                android:id="@+id/tv_year_paln"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/cera_pro_medium"
+                android:gravity="center"
+                android:text="@string/annual_plan"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_billing_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_trial"
+        android:text="@string/billing_info"
+        android:layout_below="@+id/ll_statistics"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center"
+        android:textSize="11sp"
+        tools:ignore="SmallSp"
+        android:fontFamily="@font/cera_pro_regular"/>
+
+    <Button
+        android:id="@+id/btn_trial"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/seven_days_trial"
+        android:textSize="16sp"
+        android:fontFamily="@font/cera_pro_bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_tutorial"
+        android:textColor="@color/colorWhite"
+        />
+
+</RelativeLayout>

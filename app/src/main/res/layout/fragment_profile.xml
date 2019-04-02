@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragments.main_menu.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/cera_pro_regular"
+            android:gravity="start|center_vertical"
+            android:paddingTop="17dp"
+            android:paddingEnd="21dp"
+            android:paddingBottom="10dp"
+            android:text="@string/sign_out"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_settings_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_out"
+            android:fontFamily="@font/cera_pro_bold"
+            android:gravity="center_horizontal"
+            android:paddingTop="36dp"
+            android:paddingBottom="34dp"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/account_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_settings_tittle"
+            android:background="@color/category_title_grey"
+            android:fontFamily="@font/cera_pro_bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/account"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_tv"
+            android:background="@drawable/grey_border"
+            android:orientation="horizontal"
+            android:paddingTop="14dp"
+            android:paddingBottom="13dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:paddingStart="18dp"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:paddingEnd="19dp"
+                android:text="email@email.com"
+                android:textAlignment="textEnd"
+                android:textColor="@color/email_or_subscription_grey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_membership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_email"
+            android:background="@drawable/grey_border"
+            android:orientation="horizontal"
+            android:paddingTop="14dp"
+            android:paddingBottom="13dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:paddingStart="18dp"
+                android:text="@string/membership_word"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:paddingEnd="19dp"
+                android:text="Freemium"
+                android:textAlignment="textEnd"
+                android:textColor="@color/email_or_subscription_grey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_native_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_membership"
+            android:background="@drawable/grey_border"
+            android:orientation="horizontal"
+            android:paddingTop="14dp"
+            android:paddingBottom="13dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cera_pro_regular"
+                android:paddingStart="18dp"
+                android:text="@string/native_language"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/s_spinner"
+                android:fontFamily="@font/cera_pro_regular"
+                android:textColor="@color/email_or_subscription_grey"
+                android:textSize="12sp"
+                tools:text="English" />
+
+            <Spinner
+                android:id="@+id/s_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingEnd="19dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/get_premium_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_native_language"
+            android:background="@drawable/grey_border"
+            android:fontFamily="@font/cera_pro_regular"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/get_premium_word"
+            android:textAllCaps="true"
+            android:textColor="@color/get_premium_orange"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/about_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/get_premium_tv"
+            android:background="@color/category_title_grey"
+            android:fontFamily="@font/cera_pro_bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/about_word_profile_screen"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/send_us_your_feedback_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_tv"
+            android:background="@drawable/grey_border"
+            android:fontFamily="@font/cera_pro_regular"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/send_us_your_feedback_profile_screen"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+
+            android:id="@+id/text_to_a_friend_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/send_us_your_feedback_tv"
+            android:background="@drawable/grey_border"
+            android:fontFamily="@font/cera_pro_regular"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/text_to_a_friend_profile_screen"
+            android:textColor="@color/profile_screen_blue"
+            android:textSize="12sp" />
+
+        <TextView
+
+            android:id="@+id/rate_us_on_app_store_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_to_a_friend_tv"
+            android:background="@drawable/grey_border"
+            android:fontFamily="@font/cera_pro_regular"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/rate_us_on_app_store_profile_screen"
+            android:textColor="@color/profile_screen_blue"
+            android:textSize="12sp" />
+
+        <TextView
+
+            android:id="@+id/privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rate_us_on_app_store_tv"
+            android:background="@drawable/grey_border"
+            android:fontFamily="@font/cera_pro_regular"
+            android:gravity="start|center_vertical"
+            android:paddingStart="19dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/privacy_policy_profile_screen"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</ScrollView>
