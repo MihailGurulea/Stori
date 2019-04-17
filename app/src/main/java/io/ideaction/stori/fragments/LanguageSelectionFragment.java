@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 
 import butterknife.BindView;
@@ -36,13 +38,6 @@ import retrofit2.Response;
 public class LanguageSelectionFragment extends Fragment implements GetStorisAsync.GetStorisAsyncListener {
 
     private static final String TAG = "LanguageSelectionFg";
-
-    private static final int ENGLISH = 1;
-    private static final int SPANISH = 2;
-    private static final int FRENCH = 3;
-    private static final int GERMAN = 4;
-    private static final int ITALIAN = 5;
-    private static final int RUSSIAN = 6;
 
     @BindView(R.id.list_view)
     ListView mListView;
@@ -145,7 +140,7 @@ public class LanguageSelectionFragment extends Fragment implements GetStorisAsyn
 
         mCall.enqueue(new Callback<UserModel>() {
             @Override
-            public void onResponse(Call<UserModel> call, Response<UserModel> response) {
+            public void onResponse(@NotNull Call<UserModel> call, @NotNull Response<UserModel> response) {
                 if (response.isSuccessful()) {
                     StoriApplication.getInstance().setUserCredentials(response.body());
                     Log.i(TAG, StoriApplication.getInstance().getUserCredentials().toString());
@@ -165,7 +160,7 @@ public class LanguageSelectionFragment extends Fragment implements GetStorisAsyn
             }
 
             @Override
-            public void onFailure(Call<UserModel> call, Throwable t) {
+            public void onFailure(@NotNull Call<UserModel> call, @NotNull Throwable t) {
                 mActivity.hideProgressBar();
                 Log.d(TAG, t.getMessage(), t);
                 Toasty.error(mActivity, "Oops, something went wrong...", Toast.LENGTH_LONG).show();

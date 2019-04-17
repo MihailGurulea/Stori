@@ -51,7 +51,7 @@ public class SplashScreenActivity extends AppCompatActivity implements GetStoris
                 for (Locale locale : mLocales) {
                     result = mSpeech.setLanguage(locale);
                     if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                        Log.e("TTS", "This Language is not available, attempting download");
+                        Log.e("TTS", "This Language is not available, attempting to download");
                         Intent installIntent = new Intent();
                         installIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
                         startActivity(installIntent);

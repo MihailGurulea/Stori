@@ -205,26 +205,17 @@ public class MainMenuFragment extends Fragment implements CustomChangeLanguageDi
                 break;
             case CATEGORIES:
                 mStoris = new ArrayList<>();
-
-//                for (Category category : mRealm.where(Category.class).distinct("name").sort("name", Sort.ASCENDING).findAll()) {
-                for (Stori stori : mRealm.where(Stori.class).equalTo("category.name", categoryName).findAll()) {
-                    mStoris.add(stori);
-                }
-//                }
-
+                mStoris.addAll(mRealm.where(Stori.class).equalTo("category.name", categoryName).findAll());
                 mStoriAdaper.updateStori(mStoris);
                 break;
             case POPULAR_STORIES:
                 mStoris = new ArrayList<>();
-
-                for (Stori stori : mRealm.where(Stori.class).sort("favorites", Sort.DESCENDING).findAll()) {
-                    mStoris.add(stori);
-                }
-
+                mStoris.addAll(mRealm.where(Stori.class).sort("favorites", Sort.DESCENDING).findAll());
                 mStoriAdaper.updateStori(mStoris);
                 break;
             default:
                 mStoris = new ArrayList<>();
+
                 long currentMilliseconds = System.nanoTime();
 
                 for (Stori stori : mRealm.where(Stori.class).findAll()) {

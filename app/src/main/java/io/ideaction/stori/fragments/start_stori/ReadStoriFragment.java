@@ -33,7 +33,7 @@ import io.ideaction.stori.activities.StartStoriActivity;
 import io.ideaction.stori.db.Stori;
 import io.ideaction.stori.db.TranslatedWord;
 import io.ideaction.stori.db.Vocabulary;
-import io.ideaction.stori.utils.CustomDialog;
+import io.ideaction.stori.utils.EachWordDialog;
 import io.ideaction.stori.utils.Languages;
 import io.ideaction.stori.utils.Utils;
 import io.realm.Case;
@@ -43,7 +43,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ReadStoriFragment extends Fragment implements CustomDialog.CustomDialogListener {
+public class ReadStoriFragment extends Fragment implements EachWordDialog.CustomDialogListener {
 
     private static final String TAG = "ReadStoriFragment";
     private static final String STORI_ID = "io.ideaction.stori.fragments.start_stori.storiId";
@@ -74,7 +74,7 @@ public class ReadStoriFragment extends Fragment implements CustomDialog.CustomDi
     private int mStoriId;
     private Stori mStori;
     private TextToSpeech mTTS;
-    private CustomDialog mCustomDialog;
+    private EachWordDialog mEachWordDialog;
     private Call<Void> mCall;
     private Call<Void> mCallReadStori;
 
@@ -181,12 +181,12 @@ public class ReadStoriFragment extends Fragment implements CustomDialog.CustomDi
                 if (translatedWord != null) {
                     textView.setBackgroundResource(R.drawable.read_stori_words_yellow);
                     textView.setTextColor(getResources().getColor(android.R.color.white));
-                    mCustomDialog = new CustomDialog(mActivity, translatedWord, ReadStoriFragment.this);
-                    mCustomDialog.setOnDismissListener(dialog -> {
+                    mEachWordDialog = new EachWordDialog(mActivity, translatedWord, ReadStoriFragment.this);
+                    mEachWordDialog.setOnDismissListener(dialog -> {
                         textView.setBackgroundResource(R.drawable.read_stori_words_white);
                         textView.setTextColor(getResources().getColor(android.R.color.black));
                     });
-                    mCustomDialog.show();
+                    mEachWordDialog.show();
                 }
             });
 
@@ -349,8 +349,8 @@ public class ReadStoriFragment extends Fragment implements CustomDialog.CustomDi
 
     @Override
     public void dismiss() {
-        if (mCustomDialog != null && mCustomDialog.isShowing()) {
-            mCustomDialog.dismiss();
+        if (mEachWordDialog != null && mEachWordDialog.isShowing()) {
+            mEachWordDialog.dismiss();
         }
     }
 

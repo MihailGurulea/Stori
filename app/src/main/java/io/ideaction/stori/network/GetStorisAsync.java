@@ -34,6 +34,11 @@ public class GetStorisAsync extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
+        requestStories();
+        return null;
+    }
+
+    private void requestStories() {
         mCall = StoriApplication.apiInterface().getStories("Bearer " + StoriApplication.getInstance().getToken());
 
         mCall.enqueue(new Callback<List<Stori>>() {
@@ -41,39 +46,14 @@ public class GetStorisAsync extends AsyncTask<Void, Void, Void> {
             public void onResponse(Call<List<Stori>> call, Response<List<Stori>> response) {
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
-                        for (Stori stori : response.body()) {
-                            if (stori.getImage() != null && stori.getImage().length() > 0) {
-                                Picasso.get().load(stori.getImage()).resize(1280, 720).fetch();
-                            }
-                        }
+                        loadImagesFrom(response);
                         mRealm = getRealmInstance();
                         mRealm.executeTransaction(r -> {
                             r.deleteAll();
                             r.insert(response.body());
                         });
 
-                        mCallGetWords = StoriApplication.apiInterface().getWords("Bearer " + StoriApplication.getInstance().getToken());
-                        mCallGetWords.enqueue(new Callback<Vocabulary>() {
-                            @Override
-                            public void onResponse(Call<Vocabulary> call, Response<Vocabulary> response) {
-                                if (response.isSuccessful()) {
-                                    if (response.body() != null) {
-                                        mRealm = getRealmInstance();
-                                        mRealm.executeTransaction(r -> r.insert(response.body()));
-                                        mGetStorisAsyncListener.onSuccess();
-                                    } else {
-                                        onError(null);
-                                    }
-                                } else {
-                                    onError(null);
-                                }
-                            }
-
-                            @Override
-                            public void onFailure(Call<Vocabulary> call, Throwable t) {
-                                onError(t);
-                            }
-                        });
+                        requestWords();
                     } else {
                         onError(null);
                     }
@@ -87,7 +67,39 @@ public class GetStorisAsync extends AsyncTask<Void, Void, Void> {
                 onError(t);
             }
         });
-        return null;
+    }
+
+    private void loadImagesFrom(Response<List<Stori>> response) {
+        for (Stori stori : response.body()) {
+            if (stori.getImage() != null && stori.getImage().length() > 0) {
+                Picasso.get().load(stori.getImage()).resize(1280, 720).fetch();
+            }
+        }
+    }
+
+    private void requestWords() {
+        mCallGetWords = StoriApplication.apiInterface().getWords("Bearer " + StoriApplication.getInstance().getToken());
+        mCallGetWords.enqueue(new Callback<Vocabulary>() {
+            @Override
+            public void onResponse(Call<Vocabulary> call, Response<Vocabulary> response) {
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        mRealm = getRealmInstance();
+                        mRealm.executeTransaction(r -> r.insert(response.body()));
+                        mGetStorisAsyncListener.onSuccess();
+                    } else {
+                        onError(null);
+                    }
+                } else {
+                    onError(null);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Vocabulary> call, Throwable t) {
+                onError(t);
+            }
+        });
     }
 
     private Realm getRealmInstance() {
