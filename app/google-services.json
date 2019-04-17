@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "837131202723",
+    "firebase_url": "https://stori-android.firebaseio.com",
+    "project_id": "stori-android",
+    "storage_bucket": "stori-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837131202723:android:55c6aee58f991f52",
+        "android_client_info": {
+          "package_name": "io.ideaction.stori"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837131202723-5v6edag6vgr9eknpjh41dpr9908rac80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ideaction.stori",
+            "certificate_hash": "3672c6286111a8de22b999946633fbc2ade6b3a4"
+          }
+        },
+        {
+          "client_id": "837131202723-rq3dfls94euhrh1a7dvo175fqscr73vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXkA5vnYxWy9MXIEoggdcjU5XFyYnnPDQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837131202723-rq3dfls94euhrh1a7dvo175fqscr73vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
